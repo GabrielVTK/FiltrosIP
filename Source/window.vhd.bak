@@ -1,0 +1,85 @@
+library IEEE;
+use IEEE.std_logic_1164.all;
+use IEEE.numeric_std.all;
+
+entity window is
+generic(
+	 TAM_KERNEL : integer := 3 -- Tamanho do kernel (3 => 3x3; 5 => 5x5; 7 => 7x7)
+);
+port(
+    ---------------------------
+	 ---  | 0x0  0x1  0x2 |  ---
+    ---  | 1x0  1x1  1x2 |  ---
+    ---  | 2x0  2x1  2x2 |  ---
+    ---------------------------
+  
+    i_clk          :  in  std_logic;
+  
+	 --i_Pixel0x0     :  in  std_logic_vector(7 downto 0); -- [-1, -1]
+    --i_Pixel0x1     :  in  std_logic_vector(7 downto 0); -- [-1,  0]
+    --i_Pixel0x2     :  in  std_logic_vector(7 downto 0); -- [-1,  1]
+    
+    --i_Pixel1x0     :  in  std_logic_vector(7 downto 0); -- [ 0, -1]
+    --i_Pixel1x1     :  in  std_logic_vector(7 downto 0); -- [ 0,  0]
+    --i_Pixel1x2     :  in  std_logic_vector(7 downto 0); -- [ 0,  1]
+    
+    --i_Pixel2x0     :  in  std_logic_vector(7 downto 0); -- [ 1, -1]
+    --i_Pixel2x1     :  in  std_logic_vector(7 downto 0); -- [ 1,  0]
+    --i_Pixel2x2     :  in  std_logic_vector(7 downto 0); -- [ 1,  1]
+	 
+	 i_PixelLine0   :  in std_logic_vector((8*TAM_KERNEL - 1) downto 0);
+	 i_PixelLine1   :  in std_logic_vector((8*TAM_KERNEL - 1) downto 0);
+	 i_PixelLine2   :  in std_logic_vector((8*TAM_KERNEL - 1) downto 0);
+        
+    o_Result       :  out std_logic_vector(7 downto 0)
+    );
+end window;
+
+architecture arch0 of window is
+
+	 --signal w_Kernel0x0   : std_logic_vector(7 downto 0) := "00000001";
+    --signal w_Kernel0x1   : std_logic_vector(7 downto 0) := "00000001";
+    --signal w_Kernel0x2   : std_logic_vector(7 downto 0) := "00000001";
+	     
+    --signal w_Kernel1x0 : std_logic_vector(7 downto 0) := "00000001";
+    --signal w_Kernel1x1 : std_logic_vector(7 downto 0) := "00000001";
+    --signal w_Kernel1x2 : std_logic_vector(7 downto 0) := "00000001";
+    
+    --signal w_Kernel2x0 : std_logic_vector(7 downto 0) := "00000001";
+    --signal w_Kernel2x1 : std_logic_vector(7 downto 0) := "00000001";
+    --signal w_Kernel2x2 : std_logic_vector(7 downto 0) := "00000001";
+	 
+	 signal w_KernelLine0 : std_logic_vector((8*TAM_KERNEL - 1) downto 0);
+	 signal w_KernelLine1 : std_logic_vector((8*TAM_KERNEL - 1) downto 0);
+	 signal w_KernelLine2 : std_logic_vector((8*TAM_KERNEL - 1) downto 0);
+	 
+    
+begin
+
+	w_KernelLine0 <= b"00000001_00000001_00000001";
+	w_KernelLine1 <= b"00000001_00000001_00000001";
+	w_KernelLine2 <= b"00000001_00000001_00000001";
+  
+	process(i_clk)
+	
+		variable result : std_logic_vector(15 downto 0) := 0;
+	
+	begin
+		
+		result := 0;
+		
+		for i in 0 to (TAM_KERNEL - 1) loop
+							
+			result := result + (
+				unsigned(w_KernelLine0((8*i - 1) downto 8*i)) * unsigned(i_PixelLine0((8*i - 1) downto 8*i)) +
+				unsigned(w_KernelLine1((8*i - 1) downto 8*i)) * unsigned(i_PixelLine1((8*i - 1) downto 8*i)) +
+				unsigned(w_KernelLine2((8*i - 1) downto 8*i)) * unsigned(i_PixelLine2((8*i - 1) downto 8*i))
+			);
+			
+		end loop;
+	  
+		o_Result <= std_logic_vector(to_unsigned(result / 9, 8));
+
+	end process;
+  
+end arch0;

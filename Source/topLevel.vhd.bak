@@ -1,0 +1,190 @@
+library IEEE;
+use IEEE.std_logic_1164.all;
+
+entity topLevel is
+generic(
+	 TAM_IMG    : integer := 5; -- Tamanho da imagem
+	 TAM_KERNEL : integer := 3 -- Tamanho do kernel (3 => 3x3; 5 => 5x5; 7 => 7x7)
+);
+port(
+		i_RESET       :  in  std_logic;
+		i_clk         :  in  std_logic;
+		i_pixel       :  in  std_logic_vector(7 downto 0);
+		o_pixel       :  out std_logic_vector(7 downto 0);
+		o_FlagProcess :  out std_logic
+);
+end topLevel;
+
+architecture arch0 of topLevel is
+
+    signal w_OUT_RowBuffer1x0 : std_logic_vector(7 downto 0);
+    signal w_OUT_RowBuffer1x1 : std_logic_vector(7 downto 0);
+    signal w_OUT_RowBuffer1x2 : std_logic_vector(7 downto 0);
+
+    signal w_OUT_RowBuffer2x0 : std_logic_vector(7 downto 0);
+    signal w_OUT_RowBuffer2x1 : std_logic_vector(7 downto 0);
+    signal w_OUT_RowBuffer2x2 : std_logic_vector(7 downto 0);
+
+	  --signal w_Buffer0x0        : std_logic_vector(7 downto 0);
+    --signal w_Buffer0x1        : std_logic_vector(7 downto 0);
+    --signal w_Buffer0x2        : std_logic_vector(7 downto 0);
+	 
+	  signal w_Buffer           : std_logic_vector(TAM_KERNEL*8 downto 0);
+	 
+	  signal w_OUT_RowBuffer    : std_logic_vector((TAM_KERNEL - 1)*TAM_KERNEL*8 downto 0);
+	
+	  signal w_Flag_Process     : std_logic := '0';
+	  
+	  signal w_Flag_Process2    : std_logic := '0';
+	 
+	  signal w_Window_0x0       : std_logic_vector(7 downto 0);
+	  signal w_Window_0x1       : std_logic_vector(7 downto 0);
+	  signal w_Window_0x2       : std_logic_vector(7 downto 0);
+	 
+    signal w_Window_1x0       : std_logic_vector(7 downto 0);
+	  signal w_Window_1x1       : std_logic_vector(7 downto 0);
+	  signal w_Window_1x2       : std_logic_vector(7 downto 0);
+	 
+	  signal w_Window_2x0       : std_logic_vector(7 downto 0);
+	  signal w_Window_2x1       : std_logic_vector(7 downto 0);
+	  signal w_Window_2x2       : std_logic_vector(7 downto 0);
+	 
+begin
+	 
+	 o_FlagProcess <= w_Flag_Process;
+	 
+	 w_Window_0x0 <= w_OUT_RowBuffer2x0;
+	 w_Window_0x1 <= w_OUT_RowBuffer2x1;
+	 w_Window_0x2 <= w_OUT_RowBuffer2x2;
+	 
+	 w_Window_1x0 <= w_OUT_RowBuffer1x0;
+	 w_Window_1x1 <= w_OUT_RowBuffer1x1;
+	 w_Window_1x2 <= w_OUT_RowBuffer1x2;
+	 
+	 w_Window_2x0 <= w_Buffer(7 downto 0);
+	 w_Window_2x1 <= w_Buffer(15 downto 8);
+	 w_Window_2x2 <= w_Buffer(23 downto 16);
+	 
+	 control : entity work.control
+	 generic map (
+		  TAM_IMG    => TAM_IMG,
+		  TAM_KERNEL => TAM_KERNEL
+	 )
+	 port map(
+	    i_CLOCK         => i_clk,
+		  i_RESET         => i_RESET,
+		  o_FlagProcess  => w_Flag_Process2
+	 );
+	 
+   window : entity work.window
+    port map(
+   	i_clk      => i_clk,
+      
+		i_Pixel0x0 => w_Window_0x0,
+		i_Pixel0x1 => w_Window_0x1,
+		i_Pixel0x2 => w_Window_0x2,
+			  
+		i_Pixel1x0 => w_Window_1x0,
+		i_Pixel1x1 => w_Window_1x1,
+		i_Pixel1x2 => w_Window_1x2,
+		 
+		i_Pixel2x0 => w_Window_2x0,
+		i_Pixel2x1 => w_Window_2x1,
+		i_Pixel2x2 => w_Window_2x2,
+				
+		o_Result    => o_pixel
+    );
+    
+    rowBuffer1 : entity work.RowBuffer
+	  generic map (
+		  TAM_IMG   => TAM_IMG
+	  )
+    port map (
+		  i_RESET   => i_RESET,
+      i_CLOCK   => i_clk,
+      i_D       => w_Buffer(7 downto 0),
+      o_OUT0    => w_OUT_RowBuffer1x0,
+      o_OUT1    => w_OUT_RowBuffer1x1,
+      o_OUT2    => w_OUT_RowBuffer1x2
+    );
+
+    rowBuffer2 : entity work.RowBuffer
+	  generic map (
+		  TAM_IMG   => TAM_IMG
+	  )
+    port map (
+		  i_RESET   => i_RESET,
+      i_CLOCK   => i_clk,
+      i_D       => w_OUT_RowBuffer1x0,
+      o_OUT0    => w_OUT_RowBuffer2x0,
+      o_OUT1    => w_OUT_RowBuffer2x1,
+      o_OUT2    => w_OUT_RowBuffer2x2
+    );
+    
+  process(i_clk)
+   
+   variable v_TAMANHO      : integer := TAM_IMG; -- tamanho da imagem 
+   
+   variable v_CONT_PROCESS : integer range 0 to (2*v_TAMANHO + 4)  := 0; -- 2*v_TAMANHO + 4
+	 variable v_CONT         : integer range 0 to v_TAMANHO  := 1; -- v_TAMANHO
+	 
+	 variable v_CONT_LINHA   : integer range 0 to (v_TAMANHO - 2)  := 0; -- v_TAMANHO - 2
+	 
+	begin
+    	
+		if(rising_edge(i_clk)) then
+		
+		  -- delay para comecar o processamento
+		  -- deve encher os row buffers e uma linha da janela
+		  if(v_CONT_PROCESS <= (2*v_TAMANHO + 3)) then -- quantidade para comecar a processar (2*largura + 3)
+		    v_CONT_PROCESS := v_CONT_PROCESS + 1;
+		  else 
+		    v_CONT := v_CONT+1;
+		  end if;
+			
+			-- 
+			if(
+			 v_CONT <= (v_TAMANHO - 2) and           -- v_TAMANHO - 2 (bordas)
+			 v_CONT_PROCESS = (2*v_TAMANHO + 4) and  -- 2*v_TAMANHO + 4 (delay processamento)
+			 v_CONT_LINHA < (v_TAMANHO - 2)) then    -- v_TAMANHO - 2
+			 
+				w_Flag_Process <= '1';
+				
+			elsif(v_CONT <= (v_TAMANHO - 1)) then    -- v_TAMANHO - 1
+			
+				w_Flag_Process <= '0';
+				
+			else
+			  
+			  v_CONT := 0;
+			  w_Flag_Process <= '0';
+			  
+			  if(v_CONT_LINHA <= (v_TAMANHO - 3)) then  -- v_TAMANHO - 3
+			  
+			   v_CONT_LINHA := v_CONT_LINHA + 1;
+			   
+			  end if;
+			  
+			end if;
+			
+			----------------------------------------------------------------------------------------
+			
+			-- w_Buffer0x0 <= w_Buffer0x1;
+			-- w_Buffer0x1 <= w_Buffer0x2;
+			-- w_Buffer0x2 <= i_pixel;
+			
+			for i in 0 to (TAM_KERNEL - 2) loop
+			
+				w_Buffer(((i + 1)*8 - 1) downto (i*8)) <= w_Buffer(((i + 2)*8 - 1) downto (i + 1)*8);
+			
+			end loop;
+			
+			w_Buffer((TAM_KERNEL*8 - 1) downto ((TAM_KERNEL - 1)*8)) <= i_pixel;
+			
+			----------------------------------------------------------------------------------------
+			
+		end if;
+    
+  end process;
+
+end arch0;

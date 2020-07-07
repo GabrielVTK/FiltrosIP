@@ -1,0 +1,23 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity flip_flop is
+  generic(c_width : integer := 2);
+
+  port(i_clock : in std_logic;
+    i_D : in std_logic_vector(c_width-1 downto 0);
+    i_EN : in std_logic;
+    o_QF : out std_logic_vector(c_width-1 downto 0)
+  );
+end entity flip_flop;
+
+architecture a1 of flip_flop is
+begin
+  process(i_clock)
+  begin
+    if(rising_edge(i_clock) and i_EN = '1') then
+      o_QF(0) <= i_D(0);
+      o_QF(1) <= i_D(1);
+    end if;
+  end process;
+end a1;

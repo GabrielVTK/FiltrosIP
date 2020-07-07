@@ -1,0 +1,161 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\Razagorus\Desktop\filtro\simulation\qsim
+vrowbuffer
+Z1 !s100 HlEnOU?OIE7G7E:1i93O?0
+Z2 I[b[GT@bU=W1jY`:O0Ab922
+Z3 VZb_:JPnEe>k1O;H3gWz>J2
+Z4 dC:\Users\Razagorus\Desktop\filtro\simulation\qsim
+Z5 w1589892895
+Z6 8filtro.vo
+Z7 Ffiltro.vo
+L0 31
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s90 -work|work|filtro.vo|
+Z10 o-work work -O0
+Z11 !s108 1589892895.739000
+Z12 !s107 filtro.vo|
+!i10b 1
+!s85 0
+!s101 -O0
+vrowbuffer_vlg_check_tst
+Z13 !s100 79`WO]niB`_MXceeke2EZ1
+Z14 I6M^MRX]M8KXV3i4B5[hQO2
+Z15 VUKEkHEHHcfiV0O8a8VlK_3
+R4
+Z16 w1589892894
+Z17 8filtro.vt
+Z18 Ffiltro.vt
+L0 59
+R8
+r1
+31
+Z19 !s108 1589892895.788000
+Z20 !s107 filtro.vt|
+Z21 !s90 -work|work|filtro.vt|
+R10
+!i10b 1
+!s85 0
+!s101 -O0
+vrowbuffer_vlg_sample_tst
+Z22 !s100 _MbEe;Kf[0GomWF0fa]ME2
+Z23 Ik4ZOz6MF2N@cP5AWabO<?3
+Z24 VA=_<m[9SGjefzm`XBj]D:3
+R4
+R16
+R17
+R18
+L0 29
+R8
+r1
+31
+R19
+R20
+R21
+R10
+!i10b 1
+!s85 0
+!s101 -O0
+vrowbuffer_vlg_vec_tst
+Z25 !s100 kJbj04XY5aFINJdM1Qi`A3
+Z26 Im7gAZezLbUB^kY^j:Y=a53
+Z27 V8>nz?:@BPf=07oE_[z9Z02
+R4
+R16
+R17
+R18
+Z28 L0 279
+R8
+r1
+31
+R19
+R20
+R21
+R10
+!i10b 1
+!s85 0
+!s101 -O0
+vtopLevel
+Z29 !s100 2dOWMYTgECoGOWcbFOlh30
+Z30 I[XinoPLVlCAJCLe`;l`@m1
+Z31 VIVgknTeXAl6IJdk[PzUmz0
+Z32 dC:\Users\Gabriel\Documents\filtro\filtro\simulation\qsim
+Z33 w1590549381
+R6
+R7
+L0 31
+R8
+r1
+31
+R9
+R10
+Z34 ntop@level
+!i10b 1
+!s85 0
+Z35 !s108 1590549382.478000
+R12
+!s101 -O0
+vtopLevel_vlg_check_tst
+!i10b 1
+!s100 zD9jYmFUnIkOkHj7Mz5IJ3
+ILad;2CIcPcDKX85_EcV[L0
+VhA9no[TggNF;^oE01XWoe1
+R32
+Z36 w1590549379
+R17
+R18
+L0 59
+R8
+r1
+!s85 0
+31
+Z37 !s108 1590549382.654000
+Z38 !s107 filtro.vt|
+R21
+!s101 -O0
+R10
+ntop@level_vlg_check_tst
+vtopLevel_vlg_sample_tst
+!i10b 1
+!s100 m0h2>ULC^Zgoclm@_PYCJ2
+If3FK0TR33eJAzV4Gz?zj;3
+V=El5?P^`5fXFA0aDbNmSG3
+R32
+R36
+R17
+R18
+L0 29
+R8
+r1
+!s85 0
+31
+R37
+R38
+R21
+!s101 -O0
+R10
+ntop@level_vlg_sample_tst
+vtopLevel_vlg_vec_tst
+!i10b 1
+!s100 o[123l@;jE;cY`]_FlON33
+IhW[m@PdPRJEcn:EBV:ofX1
+Z39 V[QQ8PD<Y_PojBX>RELD<_3
+R32
+R36
+R17
+R18
+R28
+R8
+r1
+!s85 0
+31
+R37
+R38
+R21
+!s101 -O0
+R10
+Z40 ntop@level_vlg_vec_tst

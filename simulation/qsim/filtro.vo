@@ -1,0 +1,299 @@
+// Copyright (C) 1991-2013 Altera Corporation
+// Your use of Altera Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Altera Program License 
+// Subscription Agreement, Altera MegaCore Function License 
+// Agreement, or other applicable license agreement, including, 
+// without limitation, that your use is for the sole purpose of 
+// programming logic devices manufactured by Altera and sold by 
+// Altera or its authorized distributors.  Please refer to the 
+// applicable agreement for further details.
+
+// VENDOR "Altera"
+// PROGRAM "Quartus II 64-Bit"
+// VERSION "Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition"
+
+// DATE "05/27/2020 00:16:21"
+
+// 
+// Device: Altera EP4CGX15BF14C6 Package FBGA169
+// 
+
+// 
+// This Verilog file should be used for ModelSim-Altera (Verilog) only
+// 
+
+`timescale 1 ps/ 1 ps
+
+module topLevel (
+	i_clk,
+	i_pixel,
+	o_pixel);
+input 	i_clk;
+input 	[7:0] i_pixel;
+output 	[7:0] o_pixel;
+
+// Design Ports Information
+// i_clk	=>  Location: PIN_F13,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// i_pixel[0]	=>  Location: PIN_F12,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// i_pixel[1]	=>  Location: PIN_G10,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// i_pixel[2]	=>  Location: PIN_C12,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// i_pixel[3]	=>  Location: PIN_K12,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// i_pixel[4]	=>  Location: PIN_D13,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// i_pixel[5]	=>  Location: PIN_F9,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// i_pixel[6]	=>  Location: PIN_L4,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// i_pixel[7]	=>  Location: PIN_A11,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// o_pixel[0]	=>  Location: PIN_K9,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// o_pixel[1]	=>  Location: PIN_G9,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// o_pixel[2]	=>  Location: PIN_J13,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// o_pixel[3]	=>  Location: PIN_K11,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// o_pixel[4]	=>  Location: PIN_A13,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// o_pixel[5]	=>  Location: PIN_L12,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// o_pixel[6]	=>  Location: PIN_H10,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// o_pixel[7]	=>  Location: PIN_N12,	 I/O Standard: 2.5 V,	 Current Strength: Default
+
+
+wire gnd;
+wire vcc;
+wire unknown;
+
+assign gnd = 1'b0;
+assign vcc = 1'b1;
+assign unknown = 1'bx;
+
+tri1 devclrn;
+tri1 devpor;
+tri1 devoe;
+wire \i_clk~input_o ;
+wire \i_pixel[0]~input_o ;
+wire \i_pixel[1]~input_o ;
+wire \i_pixel[2]~input_o ;
+wire \i_pixel[3]~input_o ;
+wire \i_pixel[4]~input_o ;
+wire \i_pixel[5]~input_o ;
+wire \i_pixel[6]~input_o ;
+wire \i_pixel[7]~input_o ;
+wire \o_pixel[0]~output_o ;
+wire \o_pixel[1]~output_o ;
+wire \o_pixel[2]~output_o ;
+wire \o_pixel[3]~output_o ;
+wire \o_pixel[4]~output_o ;
+wire \o_pixel[5]~output_o ;
+wire \o_pixel[6]~output_o ;
+wire \o_pixel[7]~output_o ;
+
+
+// Location: IOOBUF_X22_Y0_N2
+cycloneiv_io_obuf \o_pixel[0]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\o_pixel[0]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \o_pixel[0]~output .bus_hold = "false";
+defparam \o_pixel[0]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X33_Y22_N2
+cycloneiv_io_obuf \o_pixel[1]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\o_pixel[1]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \o_pixel[1]~output .bus_hold = "false";
+defparam \o_pixel[1]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X33_Y15_N9
+cycloneiv_io_obuf \o_pixel[2]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\o_pixel[2]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \o_pixel[2]~output .bus_hold = "false";
+defparam \o_pixel[2]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X33_Y11_N2
+cycloneiv_io_obuf \o_pixel[3]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\o_pixel[3]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \o_pixel[3]~output .bus_hold = "false";
+defparam \o_pixel[3]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X26_Y31_N2
+cycloneiv_io_obuf \o_pixel[4]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\o_pixel[4]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \o_pixel[4]~output .bus_hold = "false";
+defparam \o_pixel[4]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X33_Y12_N2
+cycloneiv_io_obuf \o_pixel[5]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\o_pixel[5]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \o_pixel[5]~output .bus_hold = "false";
+defparam \o_pixel[5]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X33_Y14_N2
+cycloneiv_io_obuf \o_pixel[6]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\o_pixel[6]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \o_pixel[6]~output .bus_hold = "false";
+defparam \o_pixel[6]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X29_Y0_N2
+cycloneiv_io_obuf \o_pixel[7]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\o_pixel[7]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \o_pixel[7]~output .bus_hold = "false";
+defparam \o_pixel[7]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOIBUF_X33_Y16_N8
+cycloneiv_io_ibuf \i_clk~input (
+	.i(i_clk),
+	.ibar(gnd),
+	.o(\i_clk~input_o ));
+// synopsys translate_off
+defparam \i_clk~input .bus_hold = "false";
+defparam \i_clk~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X33_Y16_N1
+cycloneiv_io_ibuf \i_pixel[0]~input (
+	.i(i_pixel[0]),
+	.ibar(gnd),
+	.o(\i_pixel[0]~input_o ));
+// synopsys translate_off
+defparam \i_pixel[0]~input .bus_hold = "false";
+defparam \i_pixel[0]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X33_Y22_N8
+cycloneiv_io_ibuf \i_pixel[1]~input (
+	.i(i_pixel[1]),
+	.ibar(gnd),
+	.o(\i_pixel[1]~input_o ));
+// synopsys translate_off
+defparam \i_pixel[1]~input .bus_hold = "false";
+defparam \i_pixel[1]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X31_Y31_N8
+cycloneiv_io_ibuf \i_pixel[2]~input (
+	.i(i_pixel[2]),
+	.ibar(gnd),
+	.o(\i_pixel[2]~input_o ));
+// synopsys translate_off
+defparam \i_pixel[2]~input .bus_hold = "false";
+defparam \i_pixel[2]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X33_Y11_N8
+cycloneiv_io_ibuf \i_pixel[3]~input (
+	.i(i_pixel[3]),
+	.ibar(gnd),
+	.o(\i_pixel[3]~input_o ));
+// synopsys translate_off
+defparam \i_pixel[3]~input .bus_hold = "false";
+defparam \i_pixel[3]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X29_Y31_N8
+cycloneiv_io_ibuf \i_pixel[4]~input (
+	.i(i_pixel[4]),
+	.ibar(gnd),
+	.o(\i_pixel[4]~input_o ));
+// synopsys translate_off
+defparam \i_pixel[4]~input .bus_hold = "false";
+defparam \i_pixel[4]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X33_Y25_N1
+cycloneiv_io_ibuf \i_pixel[5]~input (
+	.i(i_pixel[5]),
+	.ibar(gnd),
+	.o(\i_pixel[5]~input_o ));
+// synopsys translate_off
+defparam \i_pixel[5]~input .bus_hold = "false";
+defparam \i_pixel[5]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X8_Y0_N8
+cycloneiv_io_ibuf \i_pixel[6]~input (
+	.i(i_pixel[6]),
+	.ibar(gnd),
+	.o(\i_pixel[6]~input_o ));
+// synopsys translate_off
+defparam \i_pixel[6]~input .bus_hold = "false";
+defparam \i_pixel[6]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X20_Y31_N1
+cycloneiv_io_ibuf \i_pixel[7]~input (
+	.i(i_pixel[7]),
+	.ibar(gnd),
+	.o(\i_pixel[7]~input_o ));
+// synopsys translate_off
+defparam \i_pixel[7]~input .bus_hold = "false";
+defparam \i_pixel[7]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+assign o_pixel[0] = \o_pixel[0]~output_o ;
+
+assign o_pixel[1] = \o_pixel[1]~output_o ;
+
+assign o_pixel[2] = \o_pixel[2]~output_o ;
+
+assign o_pixel[3] = \o_pixel[3]~output_o ;
+
+assign o_pixel[4] = \o_pixel[4]~output_o ;
+
+assign o_pixel[5] = \o_pixel[5]~output_o ;
+
+assign o_pixel[6] = \o_pixel[6]~output_o ;
+
+assign o_pixel[7] = \o_pixel[7]~output_o ;
+
+endmodule

@@ -1,0 +1,259 @@
+library IEEE;
+use IEEE.std_logic_1164.all;
+
+entity multiplier_8bits is
+port(
+	i_X   :  in  std_logic_vector(7 downto 0);
+    i_Y   :  in  std_logic_vector(7 downto 0);
+    i_CIN :  in  std_logic;
+    o_W   :  out std_logic_vector(15 downto 0);
+    o_COUT:  out std_logic);
+end multiplier_8bits;
+
+architecture arch0 of multiplier_8bits is
+
+signal w_CINLine1  : std_logic_vector(7 downto 0);
+signal w_CINLine2  : std_logic_vector(7 downto 0);
+signal w_CINLine3  : std_logic_vector(7 downto 0);
+signal w_CINLine4  : std_logic_vector(7 downto 0);
+signal w_CINLine5  : std_logic_vector(7 downto 0);
+signal w_CINLine6  : std_logic_vector(7 downto 0);
+signal w_CINLine7  : std_logic_vector(7 downto 0);
+signal w_CINLine8  : std_logic_vector(7 downto 0);
+
+signal w_COUTLine0 : std_logic_vector(7 downto 0);
+signal w_COUTLine1 : std_logic_vector(7 downto 0);
+signal w_COUTLine2 : std_logic_vector(7 downto 0);
+signal w_COUTLine3 : std_logic_vector(7 downto 0);
+signal w_COUTLine4 : std_logic_vector(7 downto 0);
+signal w_COUTLine5 : std_logic_vector(7 downto 0);
+signal w_COUTLine6 : std_logic_vector(7 downto 0);
+signal w_COUTLine7 : std_logic_vector(7 downto 0);
+signal w_COUTLine8 : std_logic_vector(7 downto 0);
+
+signal w_ZLine1    : std_logic_vector(7 downto 0);
+signal w_ZLine2    : std_logic_vector(7 downto 0);
+signal w_ZLine3    : std_logic_vector(7 downto 0);
+signal w_ZLine4    : std_logic_vector(7 downto 0);
+signal w_ZLine5    : std_logic_vector(7 downto 0);
+signal w_ZLine6    : std_logic_vector(7 downto 0);
+signal w_ZLine7    : std_logic_vector(7 downto 0);
+signal w_ZLine8    : std_logic_vector(7 downto 0);
+
+signal w_WLine0    : std_logic_vector(7 downto 0);
+signal w_WLine1    : std_logic_vector(7 downto 0);
+signal w_WLine2    : std_logic_vector(7 downto 0);
+signal w_WLine3    : std_logic_vector(7 downto 0);
+signal w_WLine4    : std_logic_vector(7 downto 0);
+signal w_WLine5    : std_logic_vector(7 downto 0);
+signal w_WLine6    : std_logic_vector(7 downto 0);
+signal w_WLine7    : std_logic_vector(7 downto 0);
+signal w_WLine8    : std_logic_vector(7 downto 0);
+
+signal w_COUT8x0   : std_logic;
+signal w_COUT8x1   : std_logic;
+signal w_COUT8x2   : std_logic;
+signal w_COUT8x3   : std_logic;
+signal w_COUT8x4   : std_logic;
+signal w_COUT8x5   : std_logic;
+signal w_COUT8x6   : std_logic;
+
+begin
+    
+    MULT_LINE_0: entity work.multiplier_1line_8bits port map(
+      i_X    => i_X(0),
+      i_Y    => i_Y,
+      i_Z    => "00000000",
+      i_CIN  => "00000000",
+      o_W    => w_WLine0,
+      o_COUT => w_COUTLine0);
+		
+    MULT_LINE_1: entity work.multiplier_1line_8bits port map(
+      i_X    => i_X(1),
+      i_Y    => i_Y,
+      i_Z    => w_ZLine1,
+      i_CIN  => w_COUTLine0,
+      o_W    => w_WLine1,
+      o_COUT => w_COUTLine1);
+	
+    MULT_LINE_2: entity work.multiplier_1line_8bits port map(
+      i_X    => i_X(2),
+      i_Y    => i_Y,
+      i_Z    => w_ZLine2,
+      i_CIN  => w_CINLine2,
+      o_W    => w_WLine2,
+      o_COUT => w_COUTLine2);
+      
+	MULT_LINE_3: entity work.multiplier_1line_8bits port map(
+      i_X    => i_X(3),
+      i_Y    => i_Y,
+      i_Z    => w_ZLine3,
+      i_CIN  => w_CINLine3,
+      o_W    => w_WLine3,
+      o_COUT => w_COUTLine3);
+      
+	MULT_LINE_4: entity work.multiplier_1line_8bits port map(
+      i_X    => i_X(4),
+      i_Y    => i_Y,
+      i_Z    => w_ZLine4,
+      i_CIN  => w_CINLine4,
+      o_W    => w_WLine4,
+      o_COUT => w_COUTLine4);
+      
+	MULT_LINE_5: entity work.multiplier_1line_8bits port map(
+      i_X    => i_X(5),
+      i_Y    => i_Y,
+      i_Z    => w_ZLine5,
+      i_CIN  => w_CINLine5,
+      o_W    => w_WLine5,
+      o_COUT => w_COUTLine5);
+      
+	MULT_LINE_6: entity work.multiplier_1line_8bits port map(
+      i_X    => i_X(6),
+      i_Y    => i_Y,
+      i_Z    => w_ZLine6,
+      i_CIN  => w_CINLine6,
+      o_W    => w_WLine6,
+      o_COUT => w_COUTLine6);
+      
+	MULT_LINE_7: entity work.multiplier_1line_8bits port map(
+      i_X    => i_X(7),
+      i_Y    => i_Y,
+      i_Z    => w_ZLine7,
+      i_CIN  => w_CINLine7,
+      o_W    => w_WLine7,
+      o_COUT => w_COUTLine7);
+
+----------------------------
+--- MULT_LINE_8
+----------------------------
+      
+	CELL_8X0: entity work.multiplicationCell port map(
+      i_X    => w_ZLine8(0),
+      i_Y    => w_ZLine8(0),
+      i_Z    => w_CINLine8(0),
+      i_CIN  => '0',
+      o_W    => o_W(8),
+      o_COUT => w_COUT8x0);
+      
+    CELL_8X1: entity work.multiplicationCell port map(
+      i_X    => w_ZLine8(1),
+      i_Y    => w_ZLine8(1),
+      i_Z    => w_CINLine8(1),
+      i_CIN  => w_COUT8x0,
+      o_W    => o_W(9),
+      o_COUT => w_COUT8x1);
+     
+    CELL_8X2: entity work.multiplicationCell port map(
+      i_X    => w_ZLine8(2),
+      i_Y    => w_ZLine8(2),
+      i_Z    => w_CINLine8(2),
+      i_CIN  => w_COUT8x1,
+      o_W    => o_W(10),
+      o_COUT => w_COUT8x2);
+	
+    CELL_8X3: entity work.multiplicationCell port map(
+      i_X    => w_ZLine8(3),
+      i_Y    => w_ZLine8(3),
+      i_Z    => w_CINLine8(3),
+      i_CIN  => w_COUT8x2,
+      o_W    => o_W(11),
+      o_COUT => w_COUT8x3);
+	
+    CELL_8X4: entity work.multiplicationCell port map(
+      i_X    => w_ZLine8(4),
+      i_Y    => w_ZLine8(4),
+      i_Z    => w_CINLine8(4),
+      i_CIN  => w_COUT8x3,
+      o_W    => o_W(12),
+      o_COUT => w_COUT8x4);
+      
+    CELL_8X5: entity work.multiplicationCell port map(
+      i_X    => w_ZLine8(5),
+      i_Y    => w_ZLine8(5),
+      i_Z    => w_CINLine8(5),
+      i_CIN  => w_COUT8x4,
+      o_W    => o_W(13),
+      o_COUT => w_COUT8x5);
+      
+    CELL_8X6: entity work.multiplicationCell port map(
+      i_X    => w_ZLine8(6),
+      i_Y    => w_ZLine8(6),
+      i_Z    => w_CINLine8(6),
+      i_CIN  => w_COUT8x5,
+      o_W    => o_W(14),
+      o_COUT => w_COUT8x6);
+
+    CELL_8X7: entity work.multiplicationCell port map(
+      i_X    => w_ZLine8(7),
+      i_Y    => w_ZLine8(7),
+      i_Z    => w_CINLine8(7),
+      i_CIN  => w_COUT8x6,
+      o_W    => o_W(15),
+      o_COUT => o_COUT);
+
+    process(w_WLine0, w_COUTLine0)
+        begin
+        	o_W(0) <= w_WLine0(0);
+    		w_ZLine1 <= '0' & w_WLine0(7 downto 1);
+            
+            w_CINLine1 <= w_COUTLine0;
+    end process;
+    
+    process(w_WLine1, w_COUTLine1)
+        begin
+        	o_W(1) <= w_WLine1(0);
+    		w_ZLine2 <= '0' & w_WLine1(7 downto 1);
+            
+            w_CINLine2 <= w_COUTLine1;
+    end process;
+    
+    process(w_WLine2, w_COUTLine2)
+        begin
+        	o_W(2) <= w_WLine2(0);
+    		w_ZLine3 <= '0' & w_WLine2(7 downto 1);
+            
+            w_CINLine3 <= w_COUTLine2;
+    end process;
+    
+    process(w_WLine3, w_COUTLine3)
+        begin
+        	o_W(3) <= w_WLine3(0);
+    		w_ZLine4 <= '0' & w_WLine3(7 downto 1);
+            
+            w_CINLine4 <= w_COUTLine3;
+    end process;
+    
+    process(w_WLine4, w_COUTLine4)
+        begin
+        	o_W(4) <= w_WLine4(0);
+    		w_ZLine5 <= '0' & w_WLine4(7 downto 1);
+            
+            w_CINLine5 <= w_COUTLine4;
+    end process;
+    
+    process(w_WLine5, w_COUTLine5)
+        begin
+        	o_W(5) <= w_WLine5(0);
+    		w_ZLine6 <= '0' & w_WLine5(7 downto 1);
+            
+            w_CINLine6 <= w_COUTLine5;
+    end process;
+    
+    process(w_WLine6, w_COUTLine6)
+        begin
+        	o_W(6) <= w_WLine6(0);
+    		w_ZLine7 <= '0' & w_WLine6(7 downto 1);
+            
+            w_CINLine7 <= w_COUTLine6;
+    end process;
+    
+    process(w_WLine7, w_COUTLine7)
+        begin
+        	o_W(7) <= w_WLine7(0);
+    		w_ZLine8 <= '0' & w_WLine7(7 downto 1);
+            
+            w_CINLine8 <= w_COUTLine7;
+    end process;
+        
+end arch0;

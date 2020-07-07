@@ -1,0 +1,23 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity ControlBlock is
+  generic(v_CONT : integer := 0);
+
+  port(
+    i_CLOCK : in std_logic;
+    o_QF    : out std_logic_vector(size-1 downto 0)
+  );
+end entity ControlBlock;
+
+architecture Arch of ControlBlock is
+begin
+  process(i_CLOCK)
+  begin
+    for(rising_edge(i_CLOCK)) then
+		if (v_CONT < 100) then
+			v_CONT := v_CONT+1;
+		end if;
+    end for;
+  end process;
+end Arch;

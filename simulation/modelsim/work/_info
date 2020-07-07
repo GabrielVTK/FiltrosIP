@@ -1,0 +1,477 @@
+m255
+K3
+13
+cModel Technology
+dC:\altera\13.0sp1
+Eadder_1bit
+Z0 w1590544702
+Z1 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z2 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z3 dC:\Users\Gabriel\Documents\filtro\filtro\simulation\modelsim
+Z4 8C:/Users/Gabriel/Documents/filtro/filtro/Source/adder_1bit.vhd
+Z5 FC:/Users/Gabriel/Documents/filtro/filtro/Source/adder_1bit.vhd
+l0
+L4
+VnX?:4g[BPzLoV0i25TS;_2
+Z6 OV;C;10.1d;51
+32
+Z7 !s108 1591246211.473000
+Z8 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/Gabriel/Documents/filtro/filtro/Source/adder_1bit.vhd|
+Z9 !s107 C:/Users/Gabriel/Documents/filtro/filtro/Source/adder_1bit.vhd|
+Z10 o-work work -2002 -explicit -O0
+Z11 tExplicit 1
+!s100 I?<^_jF0KP:_of6U[bS240
+!i10b 1
+Aarch0
+R1
+R2
+Z12 DEx4 work 10 adder_1bit 0 22 nX?:4g[BPzLoV0i25TS;_2
+l14
+L13
+VkDn[ZYiT`Xa?bDB@m0KcJ2
+R6
+32
+R7
+R8
+R9
+R10
+R11
+!s100 e7<McShLOUl7]XAO@JoJ:3
+!i10b 1
+Eadder_9bits
+Z13 w1590544757
+R1
+R2
+R3
+Z14 8C:/Users/Gabriel/Documents/filtro/filtro/Source/adder_9bits.vhd
+Z15 FC:/Users/Gabriel/Documents/filtro/filtro/Source/adder_9bits.vhd
+l0
+L4
+Vzj@?]942oDzJX>^^:Xl5^1
+R6
+32
+Z16 !s108 1591246211.680000
+Z17 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/Gabriel/Documents/filtro/filtro/Source/adder_9bits.vhd|
+Z18 !s107 C:/Users/Gabriel/Documents/filtro/filtro/Source/adder_9bits.vhd|
+R10
+R11
+!s100 YiX?SQIFiXP7c]E_2:05l2
+!i10b 1
+Aarch0
+R12
+R1
+R2
+DEx4 work 11 adder_9bits 0 22 zj@?]942oDzJX>^^:Xl5^1
+l17
+L13
+V>;Ai@>dST;6P[0`UiAb@82
+R6
+32
+R16
+R17
+R18
+R10
+R11
+!s100 S<WK=][X7UMj5m3f:FG8l1
+!i10b 1
+Econtrol
+Z19 w1593522579
+R1
+R2
+R3
+Z20 8C:/Users/Gabriel/Documents/filtro/filtro/Source/control.vhd
+Z21 FC:/Users/Gabriel/Documents/filtro/filtro/Source/control.vhd
+l0
+L4
+VY9jOPABig0W:mi?PJ_Fim1
+!s100 h_k@`kD]5e9lIhzCNX3zm0
+R6
+32
+!i10b 1
+Z22 !s108 1594094866.136000
+Z23 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/Gabriel/Documents/filtro/filtro/Source/control.vhd|
+Z24 !s107 C:/Users/Gabriel/Documents/filtro/filtro/Source/control.vhd|
+R10
+R11
+Aarch1
+R1
+R2
+Z25 DEx4 work 7 control 0 22 Y9jOPABig0W:mi?PJ_Fim1
+l23
+L17
+Z26 VVJ5T;07n1fV=REnM15UNL2
+Z27 !s100 T[JdFBCV2nbc9edGMee[:1
+R6
+32
+!i10b 1
+R22
+R23
+R24
+R10
+R11
+Econtrolblock
+Z28 w1590543763
+R1
+R2
+R3
+Z29 8C:/Users/Gabriel/Documents/filtro/filtro/Source/ControlBlock.vhd
+Z30 FC:/Users/Gabriel/Documents/filtro/filtro/Source/ControlBlock.vhd
+l0
+L4
+VJDNM?XMI`4^n6IVH=AHW@2
+R6
+32
+Z31 !s108 1591244692.974000
+Z32 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/Gabriel/Documents/filtro/filtro/Source/ControlBlock.vhd|
+Z33 !s107 C:/Users/Gabriel/Documents/filtro/filtro/Source/ControlBlock.vhd|
+R10
+R11
+!s100 9HaU>5=BY<HoN=@62j_b63
+!i10b 1
+Aarch
+R1
+R2
+DEx4 work 12 controlblock 0 22 JDNM?XMI`4^n6IVH=AHW@2
+l13
+L12
+VS4ThiF:o]S7FYkD9@WAab2
+R6
+32
+R31
+R32
+R33
+R10
+R11
+!s100 NLS;J;9zV^;gWX;ZA[b4b3
+!i10b 1
+Eflipflop
+Z34 w1593483209
+R1
+R2
+R3
+Z35 8C:/Users/Gabriel/Documents/filtro/filtro/Source/FlipFlop.vhd
+Z36 FC:/Users/Gabriel/Documents/filtro/filtro/Source/FlipFlop.vhd
+l0
+L6
+VC>az_?:6HhOGoK>@2`4mD2
+R6
+32
+Z37 !s108 1594094865.943000
+Z38 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/Gabriel/Documents/filtro/filtro/Source/FlipFlop.vhd|
+Z39 !s107 C:/Users/Gabriel/Documents/filtro/filtro/Source/FlipFlop.vhd|
+R10
+R11
+!s100 @D][:CzHC[_06PD8VKSRn3
+!i10b 1
+Aarch
+R1
+R2
+Z40 DEx4 work 8 flipflop 0 22 C>az_?:6HhOGoK>@2`4mD2
+l18
+L17
+V]CZ]]=FDR213X_`2?F4f>1
+!s100 KRM5IciFSlBcmYJAnJ8oV3
+R6
+32
+R37
+R38
+R39
+R10
+R11
+!i10b 1
+Emultiplicationcell
+Z41 w1590544041
+R1
+R2
+R3
+Z42 8C:/Users/Gabriel/Documents/filtro/filtro/Source/multiplicationCell.vhd
+Z43 FC:/Users/Gabriel/Documents/filtro/filtro/Source/multiplicationCell.vhd
+l0
+L4
+V4ETckd6]aTnA2Ihe^l06e1
+R6
+32
+Z44 !s108 1591246213.853000
+Z45 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/Gabriel/Documents/filtro/filtro/Source/multiplicationCell.vhd|
+Z46 !s107 C:/Users/Gabriel/Documents/filtro/filtro/Source/multiplicationCell.vhd|
+R10
+R11
+!s100 <PX_if320hIW;KGCHeB@X1
+!i10b 1
+Aarch0
+R12
+R1
+R2
+Z47 DEx4 work 18 multiplicationcell 0 22 4ETckd6]aTnA2Ihe^l06e1
+l16
+L14
+VHQ0i0@8f1]?;f;[8@OFnQ1
+R6
+32
+R44
+R45
+R46
+R10
+R11
+!s100 KVhBd=gnDQSg:K1UOzPMo0
+!i10b 1
+Emultiplier_1line_8bits
+Z48 w1590544912
+R1
+R2
+R3
+Z49 8C:/Users/Gabriel/Documents/filtro/filtro/Source/multiplier_1line_8bits.vhd
+Z50 FC:/Users/Gabriel/Documents/filtro/filtro/Source/multiplier_1line_8bits.vhd
+l0
+L4
+V;gGXBOXiC`4ASlNgzNCKM2
+R6
+32
+Z51 !s108 1591246214.165000
+Z52 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/Gabriel/Documents/filtro/filtro/Source/multiplier_1line_8bits.vhd|
+Z53 !s107 C:/Users/Gabriel/Documents/filtro/filtro/Source/multiplier_1line_8bits.vhd|
+R10
+R11
+!s100 =JCePSGkz7M2;<FRN3VMd0
+!i10b 1
+Aarch0
+R47
+R1
+R2
+Z54 DEx4 work 22 multiplier_1line_8bits 0 22 ;gGXBOXiC`4ASlNgzNCKM2
+l16
+L14
+VJ0fhd^_AXXOKA<_bR6e;O2
+R6
+32
+R51
+R52
+R53
+R10
+R11
+!s100 anAV1mhIgY@04bB:b`=Ie1
+!i10b 1
+Emultiplier_8bits
+Z55 w1590544524
+R1
+R2
+R3
+Z56 8C:/Users/Gabriel/Documents/filtro/filtro/Source/Multiplier_8bits.vhd
+Z57 FC:/Users/Gabriel/Documents/filtro/filtro/Source/Multiplier_8bits.vhd
+l0
+L4
+VH7>2b5d7Y4h93S_1lPTNN0
+R6
+32
+Z58 !s108 1591246214.433000
+Z59 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/Gabriel/Documents/filtro/filtro/Source/Multiplier_8bits.vhd|
+Z60 !s107 C:/Users/Gabriel/Documents/filtro/filtro/Source/Multiplier_8bits.vhd|
+R10
+R11
+!s100 =Q8M_i6`S85iC0Tmi_NJ62
+!i10b 1
+Aarch0
+R47
+R54
+R1
+R2
+DEx4 work 16 multiplier_8bits 0 22 H7>2b5d7Y4h93S_1lPTNN0
+l61
+L13
+Vo?bcgGcZKl_]^GiX5Oa:?1
+R6
+32
+R58
+R59
+R60
+R10
+R11
+!s100 G_6Pn=`QfP_nTog2BB8K_0
+!i10b 1
+Erowbuffer
+Z61 w1593998164
+R1
+R2
+R3
+Z62 8C:/Users/Gabriel/Documents/filtro/filtro/Source/rowbuffer.vhd
+Z63 FC:/Users/Gabriel/Documents/filtro/filtro/Source/rowbuffer.vhd
+l0
+L4
+VX[6gK4P@@A^Tb1Zmg_2ba2
+R6
+32
+Z64 !s108 1594094865.087000
+Z65 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/Gabriel/Documents/filtro/filtro/Source/rowbuffer.vhd|
+Z66 !s107 C:/Users/Gabriel/Documents/filtro/filtro/Source/rowbuffer.vhd|
+R10
+R11
+!s100 H?S<@^g4U4Z32CH:nbPHh1
+!i10b 1
+Aarch
+R40
+R1
+R2
+Z67 DEx4 work 9 rowbuffer 0 22 X[6gK4P@@A^Tb1Zmg_2ba2
+l19
+L17
+Ve^@HI@^gfkii@kMo2=8PC3
+R6
+32
+R64
+R65
+R66
+R10
+R11
+!s100 ]<8X^Y^LBVbhCRX;<;:NL0
+!i10b 1
+Erowbuffer5x5
+Z68 w1591273561
+R1
+R2
+R3
+Z69 8C:/Users/Gabriel/Documents/filtro/filtro/Source/rowBuffer5x5.vhd
+Z70 FC:/Users/Gabriel/Documents/filtro/filtro/Source/rowBuffer5x5.vhd
+l0
+L5
+V46cW`:9iIl0i`89jYm80S2
+R6
+32
+Z71 !s108 1593481495.739000
+Z72 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/Gabriel/Documents/filtro/filtro/Source/rowBuffer5x5.vhd|
+Z73 !s107 C:/Users/Gabriel/Documents/filtro/filtro/Source/rowBuffer5x5.vhd|
+R10
+R11
+!s100 R4@jCz7=k_^Z0kCMRJ7gB3
+!i10b 1
+Aarch
+R1
+R2
+DEx4 work 12 rowbuffer5x5 0 22 46cW`:9iIl0i`89jYm80S2
+l36
+L16
+V^Aom1Yke7LThNmEm^0jaC0
+R6
+32
+R71
+R72
+R73
+R10
+R11
+!s100 fKjDVzZU5ZlMS6H4K[[bI0
+!i10b 1
+Etestbench
+Z74 w1594093246
+Z75 DPx4 ieee 16 std_logic_textio 0 22 ?Il0a149GV276[?[UMDWh2
+Z76 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+R1
+R2
+R3
+Z77 8C:/Users/Gabriel/Documents/filtro/filtro/simulation/testbench.vhd
+Z78 FC:/Users/Gabriel/Documents/filtro/filtro/simulation/testbench.vhd
+l0
+L9
+V9MDoZQ:AJbhdGmi];jD5>3
+R6
+32
+Z79 !s108 1594094865.698000
+Z80 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/Gabriel/Documents/filtro/filtro/simulation/testbench.vhd|
+Z81 !s107 C:/Users/Gabriel/Documents/filtro/filtro/simulation/testbench.vhd|
+R10
+R11
+!s100 Uj;92ZTYTXDe1I35f9KHm1
+!i10b 1
+Aarch
+Z82 DEx4 work 8 toplevel 0 22 h=SgTNJkenJNFZ93dJKj50
+R75
+R76
+R1
+R2
+DEx4 work 9 testbench 0 22 9MDoZQ:AJbhdGmi];jD5>3
+l26
+L12
+VOk2SEEQkhmLmS7W_7[R=a2
+R6
+32
+R79
+R80
+R81
+R10
+R11
+!s100 g4?g3_>K=Ul2B__=M]_Zc2
+!i10b 1
+Etoplevel
+Z83 w1594092711
+R76
+R1
+R2
+R3
+Z84 8C:/Users/Gabriel/Documents/filtro/filtro/Source/topLevel.vhd
+Z85 FC:/Users/Gabriel/Documents/filtro/filtro/Source/topLevel.vhd
+l0
+L5
+Vh=SgTNJkenJNFZ93dJKj50
+R6
+32
+Z86 !s108 1594094865.275000
+Z87 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/Gabriel/Documents/filtro/filtro/Source/topLevel.vhd|
+Z88 !s107 C:/Users/Gabriel/Documents/filtro/filtro/Source/topLevel.vhd|
+R10
+R11
+!s100 VT_2@=DF13M5NLU0dXz3M3
+!i10b 1
+Aarch0
+R67
+Z89 DEx4 work 6 window 0 22 ZRFQN6<k2EN8jA;kh@9kL1
+R76
+R1
+R2
+R82
+l31
+L21
+V<ia:WiSg[8Po[>OW5zGM@3
+R6
+32
+R86
+R87
+R88
+R10
+R11
+!s100 :Bg@WXEocAgoV0@cIWLdf0
+!i10b 1
+Ewindow
+Z90 w1594002567
+R76
+R1
+R2
+R3
+Z91 8C:/Users/Gabriel/Documents/filtro/filtro/Source/window.vhd
+Z92 FC:/Users/Gabriel/Documents/filtro/filtro/Source/window.vhd
+l0
+L5
+VZRFQN6<k2EN8jA;kh@9kL1
+R6
+32
+Z93 !s108 1594094865.476000
+Z94 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/Gabriel/Documents/filtro/filtro/Source/window.vhd|
+Z95 !s107 C:/Users/Gabriel/Documents/filtro/filtro/Source/window.vhd|
+R10
+R11
+!s100 MG5G3hWB:CGF4cm8[a55C1
+!i10b 1
+Aarch0
+R76
+R1
+R2
+R89
+l19
+L18
+VL<WL^@hR]nN[]U5Yj0Nil3
+R6
+32
+R93
+R94
+R95
+R10
+R11
+!s100 E45k47QZYBJh<d?o;lj`63
+!i10b 1

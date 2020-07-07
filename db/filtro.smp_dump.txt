@@ -1,0 +1,6 @@
+
+State Machine - |control|Atual
+Name Atual.Processa Atual.PreencheRB Atual.Reset 
+Atual.Reset 0 0 0 
+Atual.PreencheRB 0 1 1 
+Atual.Processa 1 0 1 
