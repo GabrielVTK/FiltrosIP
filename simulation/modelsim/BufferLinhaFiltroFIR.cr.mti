@@ -9,15 +9,6 @@ Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 -- Loading entity window
 -- Loading entity RowBuffer
 
-} {} {}} C:/Users/Gabriel/Documents/filtro/filtro/Source/window.vhd {1 {vcom -work work -2002 -explicit C:/Users/Gabriel/Documents/filtro/filtro/Source/window.vhd
-Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Compiling entity window
--- Compiling architecture arch0 of window
-
 } {} {}} C:/Users/Gabriel/Documents/filtro/filtro/simulation/testbench.vhd {1 {vcom -work work -2002 -explicit C:/Users/Gabriel/Documents/filtro/filtro/simulation/testbench.vhd
 Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 -- Loading package STANDARD
@@ -36,6 +27,15 @@ Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 -- Loading package std_logic_1164
 -- Compiling entity FlipFlop
 -- Compiling architecture Arch of FlipFlop
+
+} {} {}} C:/Users/Gabriel/Documents/filtro/filtro/Source/window.vhd {1 {vcom -work work -2002 -explicit C:/Users/Gabriel/Documents/filtro/filtro/Source/window.vhd
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity window
+-- Compiling architecture arch0 of window
 
 } {} {}} C:/Users/Gabriel/Documents/filtro/filtro/Source/control.vhd {1 {vcom -work work -2002 -explicit C:/Users/Gabriel/Documents/filtro/filtro/Source/control.vhd
 Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
