@@ -1,6 +1,8 @@
 
-State Machine - |control|Atual
-Name Atual.Processa Atual.PreencheRB Atual.Reset 
-Atual.Reset 0 0 0 
-Atual.PreencheRB 0 1 1 
-Atual.Processa 1 0 1 
+State Machine - |topLevel|control:control|Atual
+Name Atual.Fim Atual.Borda Atual.Processa Atual.PreencheRB Atual.Reset 
+Atual.Reset 0 0 0 0 0 
+Atual.PreencheRB 0 0 0 1 1 
+Atual.Processa 0 0 1 0 1 
+Atual.Borda 0 1 0 0 1 
+Atual.Fim 1 0 0 0 1 

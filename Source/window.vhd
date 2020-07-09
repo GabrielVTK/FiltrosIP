@@ -7,11 +7,11 @@ generic(
 	 TAM_KERNEL : integer := 3 -- Tamanho do kernel (3 => 3x3; 5 => 5x5; 7 => 7x7)
 );
 port(
-	i_clk     :  in  std_logic;
-	i_Pixels  :  in  std_logic_vector((8*TAM_KERNEL*TAM_KERNEL - 1) downto 0);
-	i_Kernel  :  in  std_logic_vector((8*TAM_KERNEL*TAM_KERNEL - 1) downto 0);
-	i_Divider :  in  std_logic_vector(7 downto 0);
-   o_Result  :  out std_logic_vector(7 downto 0)
+	i_clk     : in  std_logic;
+	i_Pixels  : in  std_logic_vector((8*TAM_KERNEL*TAM_KERNEL - 1) downto 0);
+	i_Kernel  : in  std_logic_vector((8*TAM_KERNEL*TAM_KERNEL - 1) downto 0);
+	i_Divider : in  std_logic_vector(7 downto 0);
+   o_Result  : out std_logic_vector(7 downto 0)
  );
 end window;
 

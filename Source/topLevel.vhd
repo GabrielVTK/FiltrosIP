@@ -25,9 +25,9 @@ architecture arch0 of topLevel is
 	signal w_Buffer        : std_logic_vector((TAM_KERNEL*8 - 1) downto 0);
 	 
 	signal w_Flag_Process  : std_logic := '0';
-	  
+	
 	signal w_Pixels        : std_logic_vector((8*TAM_KERNEL*TAM_KERNEL - 1) downto 0);
-	  	 
+	
 begin
 	 
 	o_FlagProcess <= w_Flag_Process;
@@ -39,7 +39,7 @@ begin
 	WINDOW_PIXELS_2: for i in 0 to (TAM_KERNEL - 1) generate
 		w_Pixels((((i + 1)*8 - 1) + (TAM_KERNEL - 1)*TAM_KERNEL*8) downto (i*8 + (TAM_KERNEL - 1)*TAM_KERNEL*8)) <= w_Buffer(((i + 1)*8 - 1) downto i*8);
 	end generate WINDOW_PIXELS_2;
-	 	 
+		 
 	window : entity work.window
 	generic map (TAM_KERNEL => TAM_KERNEL)
 	port map(
@@ -70,25 +70,26 @@ begin
 		);
 	end generate ROWS;
 	    
-	process(i_clk)	 
+	process(i_clk)
     
 		variable v_Pixel_Counter : integer range -1 to TAM_IMG + 1                   := 0;
 		variable v_Line_Counter  : integer range 0  to TAM_IMG                       := 0;
-		variable v_DelayLimit    : integer range 0  to (2*TAM_IMG + TAM_KERNEL)  := (2*TAM_IMG + TAM_KERNEL);
+		variable v_DelayLimit    : integer range 0  to (2*TAM_IMG + TAM_KERNEL)      := (2*TAM_IMG + TAM_KERNEL);
 		
 		variable v_Flag_Delay    : std_logic := '1';
 		variable v_Flag_Borda    : std_logic := '0';
 		variable v_Flag_Fim_Img  : std_logic := '0';
 		
 	begin
-    	
+	    	
 		if(rising_edge(i_clk)) then
-						
+											
 			if(v_Flag_Fim_Img = '0') then
+			
 				if(v_Flag_Delay = '0') then
 					v_Pixel_Counter := v_Pixel_Counter + 1;
 				end if;
-				
+								
 				-- Delay
 					-- Delay do processamento (enche os row buffers e uma linha da janela)
 					if(v_DelayLimit > 0) then 

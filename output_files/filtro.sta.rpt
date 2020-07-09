@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for filtro
-Tue Jul 07 00:21:59 2020
+Thu Jul 09 00:51:16 2020
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -6977,7 +6977,7 @@ No dedicated SERDES Receiver circuitry present in device or used in design
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Tue Jul 07 00:21:51 2020
+    Info: Processing started: Thu Jul 09 00:51:07 2020
 Info: Command: quartus_sta filtro -c filtro
 Info: qsta_default_script.tcl version: #1
 Warning (20028): Parallel compilation is not licensed and has been disabled
@@ -7048,9 +7048,9 @@ Info (332146): Worst-case minimum pulse width slack is -3.000
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 4658 megabytes
-    Info: Processing ended: Tue Jul 07 00:21:59 2020
-    Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:07
+    Info: Peak virtual memory: 4657 megabytes
+    Info: Processing ended: Thu Jul 09 00:51:16 2020
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:08
 
 
